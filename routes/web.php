@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ATSController;
+use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    
+Route::group(['prefix' => 'ATS'], function () {
+    Route::get('/', [ATSController::class, 'index'])->name('ats_index');
+    Route::post('/evaluate', [ATSController::class, 'evaluate'])->name('ats_evaluate');
+    Route::post('/show', [ATSController::class, 'show'])->name('ats_show');
+    Route::patch('/update', [ATSController::class, 'update'])->name('ats_update');
+    Route::post('/destroy', [ATSController::class, 'destroy'])->name('ats_destroy');
+});
