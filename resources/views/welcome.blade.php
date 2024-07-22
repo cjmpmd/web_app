@@ -38,24 +38,8 @@
     <header class="navigation sticky-top bg-white">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html"> <img src="images/logo.png" alt="Vex" width="100px">
-                </a>
-                <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse"
-                    data-target="#navigation" aria-controls="navigation" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
                 <div class="collapse navbar-collapse text-center" id="navigation">
-                    <ul class="navbar-nav ml-auto mr-n0 mr-md-n3">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('ats_index')}}">Home</a>
-                        </li>
-
-                        
-
-                    </ul>
+                   
 
                 </div>
             </nav>
@@ -71,7 +55,7 @@
                 </div>
                 <div class="col-md-6 align-self-center text-center text-md-center">
                     <div class="block">
-                        <h1 class="font-weight-bold mb-4 font-size-60"> Stolen vehicle data in New Zealand</h1>
+                        <h1 class="font-weight-bold mb-4 font-size-60">New Zealand's stolen vehicles report</h1>
                         <a href="{{route('ats_index')}}" class="btn btn-main">{{ $buttontext }}</a>
                         <br>
                         <br>
