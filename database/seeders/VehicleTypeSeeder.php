@@ -4531,4 +4531,5 @@ class VehicleTypeSeeder extends Seeder
     }
 }
 
+// DO NOT RUN IN PRODUCTION! 
 // php artisan migrate:refresh --seed
